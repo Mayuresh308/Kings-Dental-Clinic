@@ -111,12 +111,16 @@
     }
 
     .page {
-      max-width: 1440px;
-      margin: 0 auto;
+      width: 100%;
+    }
+
+    /* Content stays centred at 1280px max, backgrounds run full width */
+    :root {
+      --gutter: max(80px, calc((100% - 1280px) / 2));
     }
 
     .section {
-      padding: 96px 80px;
+      padding: 96px var(--gutter);
     }
 
     .eyebrow {
@@ -235,7 +239,7 @@
       justify-content: space-between;
       align-items: center;
       gap: 10px 28px;
-      padding: 10px 80px;
+      padding: 10px var(--gutter);
       background: var(--primary-dark);
       color: #ffffff;
       font-size: 14px;
@@ -263,7 +267,7 @@
       justify-content: space-between;
       align-items: center;
       gap: 24px;
-      padding: 20px 80px;
+      padding: 20px var(--gutter);
       background: #ffffff;
       border-bottom: 1px solid var(--tint2);
     }
@@ -340,7 +344,7 @@
     .hero {
       gap: 64px;
       align-items: center;
-      padding: 72px 80px 80px;
+      padding: 72px var(--gutter) 80px;
       background: var(--soft);
     }
 
@@ -471,7 +475,7 @@
        ========================================================= */
     .quick {
       gap: 20px;
-      padding: 0 80px 72px;
+      padding: 0 var(--gutter) 72px;
       background: var(--soft);
     }
 
@@ -940,7 +944,7 @@
       justify-content: space-between;
       align-items: center;
       gap: 32px 48px;
-      padding: 64px 80px;
+      padding: 64px var(--gutter);
       background: var(--primary);
       color: #ffffff;
     }
@@ -1061,7 +1065,7 @@
        ========================================================= */
     .faq {
       gap: 36px;
-      padding: 88px 80px;
+      padding: 88px var(--gutter);
       background: var(--soft);
     }
 
@@ -1097,7 +1101,7 @@
        ========================================================= */
     .footer {
       gap: 48px;
-      padding: 72px 80px 48px;
+      padding: 72px var(--gutter) 48px;
       background: var(--dark);
       color: #ffffff;
     }
